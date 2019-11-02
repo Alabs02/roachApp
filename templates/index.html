@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Road Report</title>
+    <link rel="stylesheet" href="{% static 'materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <style>
         * {
             margin: 0%;
@@ -17,18 +23,60 @@
     </style>
 </head>
 <body>
-    <div class="container" id="map">
+<header>
+        <div class="navbar-fixed">
+            <nav>
+            <div class="nav-wrapper">
+                <div class="container">
+                <a href="#!" class="brand-logo" style="font-size: 23px"><img class="left"> Reports</a>
+                <a href="#!" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#!">Home</a></li>
+                    <li><a href="#!">Report</a></li>
+                    <li><a href="#!">About</a></li>
+                    <li><a href="#!"><i class="material-icons">search</i></a></li>
+                    <li><a class=" btn-floating z-depth-0 yellow darken-3" href="#!">
+                    <i class="material-icons">notifications</i></a>
+                    </li>
+                    <li><span class=" badge white-text teal new">5</span></li>
+                    <li><a class="btn blue accent-3 epx" href="#!">Explore</a></li>
+                    <li><a class='dropdown-trigger blue accent-3 btn log' href='#' data-target='dropdown1'>Login Status</a></li>
+                </ul>
+                <ul class="dropdown-content" id="dropdown1">
+                    <li><a href="#!"><i class="material-icons">account_circle</i>Login</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!"><i class="material-icons left">how_to_reg</i>Signup</a></li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+            <ul class="sidenav" id="mobile-menu">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">About</a></li>
+            <li><a href="#!">Reports</a></li>
+            </ul>
+        </div>
 
+        <div class="container section">
+            <h1 class="white-text"><strong>Reports</strong></h1>
+            <section class="contianer section">
+                <h5 class="white-text">Reporting of bad<br> roads will help in creating more awareness.<br> Through this platform 
+                    we can easily reach of let the government know the current situation of our roads.
+            </section>
+                <br>
+                <br>
+        </div>
+    
+    </header>
+    <div class=" center container" id="map">
+        <p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d153056.89478625247!2d8.789036738292!3d9.919989602720877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10513994cbb4c961%3A0xcf3f57719e3ac4c5!2sPlateau!5e0!3m2!1sen!2sng!4v1572691864409!5m2!1sen!2sng"
+                width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </p>
     </div>
+    <section class="container center">
+        <a href="#!" class="btn">click to Report</a>
+    </section>
 
-    <script>
-        function intMap() {
-            var location = {lat: 9.2446, lng: 9.3673};
-            var map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: location
-            })
-        }
-    </script>
 </body>
 </html>
