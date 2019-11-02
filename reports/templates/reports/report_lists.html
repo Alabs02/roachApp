@@ -1,0 +1,38 @@
+{% extends 'base_theme.html' %}
+{% load static from staticfiles %}  
+
+
+{% block content %}
+
+    <div class="reports">
+        <!--{% for report in reports %}-->
+                <div class="col s12 m6">
+                    <div class="card" id="card">
+                    <div class="card-image img">
+                        <img class="responsive-img" src="{% static 'default.png' %}">
+                        <span class="card-title">{{ report.title }}</span>
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center indigo-text text-darken-2">Report</h5>
+                        <p class="grey-text text-darken-4">{{ report.snippet }}</p>
+                    </div>
+                    <div> 
+                    <div class="row left-align" id="author">
+                        <div class="col s10">
+                            <div class="container">
+                                <span class="indigo-text text-darken-4 left-align">
+                                    Author: {{report.author }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    </div>
+                    </div>
+                    </div>
+                </div>
+        <!--{% endfor %}-->
+    </div>
+{% endblock  %}
+
+

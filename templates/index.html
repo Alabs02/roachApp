@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Road Report</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        #map {
+            height: 500;
+            width: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="map">
+
+    </div>
+
+    <script>
+        function intMap() {
+            var location = {lat: 9.2446, lng: 9.3673};
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4,
+                center: location
+            })
+        }
+    </script>
+</body>
+</html>

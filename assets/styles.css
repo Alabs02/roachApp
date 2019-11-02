@@ -1,0 +1,73 @@
+header{
+    background: url(headerfestx.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 800px;
+    min-width: 0%;
+}
+@media screen and (min-width: 400){
+    header{
+        min-height: 400px;
+    }
+}
+
+body {
+    background: #f1f8e9;
+}
+
+nav {
+    background-image: url(headerfestx.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+nav .badge {
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+.epx {
+    border-radius: 13px;
+}
+
+.log {
+    border-radius: 13px;
+}
+
+footer{
+    background: url(partfest.png);
+    background-size: cover;
+    background-position: center;
+    min-width: 0%;
+}
+@media screen and (min-width: 400){
+    header{
+        min-height: 400px;
+    }
+}
+
+#card {
+    border-radius: 15px;
+    height: 450px;
+}
+
+.reports .col .card .img {
+    border-radius: 15px;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#author {
+    left: 20px;;
+}
