@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Roach</title>
+  <title>Signup</title>
   <link rel="icon-precomposed" href="{% static 'roach.ico' %}">
   <link rel="stylesheet" href="{% static 'materialize.min.css' %}">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,9 +22,9 @@
             <a href="{% url 'reports:list' %}" class="brand-logo" style="font-size: 23px"><img class="left">Roach</a>
             <a href="#!" class="sidenav-trigger" data-target="mobile-menu"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li><a href="{% url 'reports:list' %}">Report</a></li>
-              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="#!">Home</a></li>
+              <li><a href="#!">Report</a></li>
+              <li><a href="#!">About</a></li>
               <li><a href="#!"><i class="material-icons">search</i></a></li>
               <li><a class=" btn-floating z-depth-0 yellow darken-3" href="#!">
                 <i class="material-icons">notifications</i></a>
@@ -49,17 +49,18 @@
         </div>
       </nav>
       <ul class="sidenav" id="mobile-menu">
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'reports:list' %}">About</a></li>
-        <li><a href="{% url 'about' %}">Reports</a></li>
+        <li><a href="#!">Home</a></li>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Reports</a></li>
       </ul>
     </div>
 
     <div class="container section">
-        <h1 class="white-text"><strong>Reports</strong></h1>
+        <h1 class="white-text"><strong>SignUp</strong></h1>
         <section class="contianer section">
-            <h5 class="white-text">Reporting of bad<br> roads will help in creating more awareness.<br> Through this platform 
-              we can easily reach of let the government know the current situation of our roads.
+            <h5 class="white-text">
+                Signup on roach and make your report.
+            </h5>
         </section>
             <br>
             <br>
@@ -67,12 +68,26 @@
   </header>
 
   <body>
-    <div class="container center wrapper">
+    <div class="container left wrapper">
         <div class="section sect transparent report">
           <div class="row">
-              {% block content %}
+            {% block content %}
+                <div class="container">
+                    <div class="row">
+                        <form class="col s12 site-form" action="/accounts/signup/" method="post">
 
-              {% endblock %}
+                            {% csrf_token %}
+                            {{ form }}
+
+                            <br><br> 
+                            <button class="btn waves-effect waves-light" type="submit" name="action" value="Signup" style="border-radius: 10px;">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            {% endblock %}
             </div>
         </div>
 

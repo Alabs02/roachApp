@@ -1,0 +1,17 @@
+{% extends 'base_theme.html' %}
+
+{% block content %}
+    <div class="create-report">
+        <h2>Report Bad Road Infastructure</h2>
+        <form action="{% url 'reports:create' %}" class=" col s12 site-form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <br><br> 
+           <!--<button class="btn waves-effect waves-light waves-yellow" type="submit"  value="Create" style="border-radius: 10px;"><a class="white-text" href="{% url 'reports:list' %}">Report
+                <i class="material-icons right">send</i></a> 
+            </button>-->
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <script src="/static/slugify.js"></script>
+{% endblock %}

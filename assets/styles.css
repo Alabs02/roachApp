@@ -48,9 +48,9 @@ footer{
     }
 }
 
-#card {
+.card {
     border-radius: 15px;
-    height: 450px;
+    height: 500px;
 }
 
 .reports .col .card .img {
@@ -70,4 +70,8 @@ body {
 
 #author {
     left: 20px;;
+}
+
+.container #rep {
+    border-radius: 10px;
 }

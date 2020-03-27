@@ -7,10 +7,10 @@
     <div class="reports">
         <!--{% for report in reports %}-->
                 <div class="col s12 m6">
-                    <div class="card" id="card">
+                    <div class="card" id="card" style="height: 500px; width: 450px;">
                     <div class="card-image img">
                         <img class="responsive-img" src="{% static 'default.png' %}">
-                        <span class="card-title">{{ report.title }}</span>
+                        <span class="card-title"><a class="white-text" href="{% url 'reports:detail' report.slug %}">{{ report.title }}</a></span>
                     </div>
                     <div class="card-content">
                         <h5 class="center indigo-text text-darken-2">Report</h5>
@@ -23,6 +23,8 @@
                                 <span class="indigo-text text-darken-4 left-align">
                                     Author: {{report.author }}
                                 </span>
+                                <p class="indigo-text text-darken-4 left-align">Phone Number: {{ report.number }}</span>
+                                <p class="indigo-text text-darken-4 left-align">Date/Time: {{ report.date }}</span>
                             </div>
                         </div>
                     </div>
